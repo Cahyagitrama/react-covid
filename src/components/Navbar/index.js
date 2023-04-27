@@ -1,8 +1,15 @@
+import style from './Navbar.module.css';
+import Menu from '../Menu/index.js';
 function Navbar() {
   return (
-    <>
-      <h2>Example Navbar</h2>
-    </>
+    <div className={style.container}>
+      <nav className={style.navbar}>
+        <div>
+          <h1 className={style.navbar__brand}>Covid ID</h1>
+        </div>
+        <Menu />
+      </nav>
+    </div>
   );
 }
 

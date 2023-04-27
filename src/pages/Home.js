@@ -1,13 +1,21 @@
-import Footer from "../components/Footer";
-import Hello from "../components/Hello";
-import Navbar from "../components/Navbar";
-
+import Footer from '../components/Footer';
+import Herro from '../components/Herro';
+import Navbar from '../components/Navbar';
+import Indonesia from '../components/Indonesia';
+import Provinces from '../components/Provinces';
+import From from '../components/From_Covid/index.js';
+import { useState } from 'react';
+import data from '../utils/constants/provinces';
 function Main() {
+  const [dataCovid, settProvinces] = useState(data.provinces);
+  // const [province, setKota] = useState('');
+
   return (
     <main>
-      <h1>Final Project - Covid ID</h1>
-      <h2>Good Luck, Bestie</h2>
-      <Hello />
+      <Herro />
+      <Indonesia />
+      <Provinces dataCovid={dataCovid} />
+      <From dataCovid={dataCovid} settProvinces={settProvinces} />
     </main>
   );
 }
